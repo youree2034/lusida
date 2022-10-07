@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUSIDA HOTEL</title>
+    <link rel="stylesheet" href="css/lusida_main.css">
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--aos js 연결-->		
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script><!-- 달력 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="css/reserve_bar.css" rel="stylesheet" type="text/css"> 
+
+
+
+
+    <link href="css/slide_autoplay.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/swiper.css">
+
+	<script src="js/swiper.min.js"></script>
+
+
+
+    <script src="js/m_togle_script.js"></script>
+    <link rel="" href="css/m_toggle.css">
+
+
+
+    <script src="js/m_offer_slid.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+
+
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--aos js 연결-->		
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script><!-- 달력 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="css/reserve_bar.css" rel="stylesheet" type="text/css"> 
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+    <div id="header_wrap">
+        <div class="header">
+           
+           
+        <div class="menu_botton">
+            <div class="gnb_wrap">
+                <div class="menu_btn"><a href="#">       
+                <img src="images/menubar.png" alt=""></a>
+                </div>
+        </div>
+        <div class="menu_bg"></div>
+        <div class="sidebar_menu">
+             <div class="close_btn"><a href="#">       
+              CLOSE     
+            </a>
+             </div>
+             <ul class="menu_wrap">
+                <li><a href="javascript:return false;">ROOM</a></li>
+                <li><a href="javascript:return false;">DINING</a></li>
+                <li><a href="javascript:return false;">LIFE STYLE</a></li>
+                <li><a href="javascript:return false;">ABOUT LUSIDA</a></li>
+             </ul>
+        </div>
+
+
+         </div>
+                   
+                   
+  
+
+            <div class="top_right">
+                <ul>
+                    <li><a href="javascript:return false;">LOG</a></li>
+                    <li>l</li>
+                    <li><a href="javascript:return false;">MY PAGE</a></li>
+                    <li>l</li>
+                    <li><a href="javascript:return false;">RESERVE</a></li>
+                </ul>
+             </div>
+
+
+             <div class="m_logo_box"><h1 class="logo_h1"><a href="javascript:return false;"><img src="images/headerlogo.png" alt=""></a></h1>
+             </div>
+         </div>
+    </div>
+
+   
+
+    <div id="video_banner">
+        <video muted="" width="100%" preload="true" loop autoplay webkit-playsinline="webkit-playsinline" playsinline="playsinline">
+                <source src="images/Sequence 02_2.mp4" type="video/mp4">
+            </video>
+            <div class="reservation_wrap">
+                <div class="reservation">
+                        
+                    <div class="select">
+                        <input type="text" id="datepicker" placeholder="CHECK IN" class="day">
+                        <input type="text" id="datepicker1" placeholder="CHECK OUT" class="day">
+                        <select>
+                            <option>성인</option>
+                            <option>1 명</option>
+                            <option>2 명</option>
+                            <option>3 명</option>
+                            <option>4 명</option>
+                            <option>5 명</option>
+                            <option>6 명</option>
+                            <option>7 명</option>
+                        </select>
+                        <select>
+                            <option>아동</option>
+                            <option>1 명</option>
+                            <option>2 명</option>
+                            <option>3 명</option>
+                            <option>4 명</option>
+                            <option>5 명</option>
+                            <option>6 명</option>
+                            <option>7 명</option>
+                        </select>
+                        <select class="pet_select">
+                            <option>유아</option>
+                            <option>1 명</option>
+                            <option>2 명</option>
+                            <option>3 명</option>
+                            <option>4 명</option>
+                        </select>
+                    </div>
+                    <div class="search"><a href="javascript:return false;">예약</a></div>
+                </div>
+                <div class="deco">
+                    <img src="images/reserve_bottom.png" alt=""></div>
+            </div>
+        </div>  <!--배너박스 끝-->    
+    
+        <script>
+            AOS.init(); //에오스
+            
+            //달력 START
+            $( function() {
+            $( "#datepicker" ).datepicker();
+            } );
+            $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+            });
+            $.datepicker.setDefaults({
+            monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
+            ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip 텍스트
+            ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
+            ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
+            });
+            $( function() {
+            $( "#datepicker1" ).datepicker();
+            } );
+            $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+            });
+            $.datepicker.setDefaults({
+            monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
+            ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip 텍스트
+            ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
+            ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
+            });
+            //달력 END
+            
+            
+        </script>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <div id="section1">
+
+        <div class="m_start">
+        <div class="section1_header"> </div>
+    </div>
+        <div class="section1_title">
+            <img src="images/section_header_Line.png" alt="">
+            <strong>ROOM</strong>
+        </div>
+
+
+        <div class="section1_box">
+
+
+            <div class="section1_main">
+                <div class="room_pic">
+
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" style="max-width:100%;">
+                          <div class="swiper-slide"><a href="javascript:return false;"><img src="images/room/roompic1.jpg" alt="배너1"></a></div>
+                          <div class="swiper-slide"><a href="javascript:return false;"><img src="images/room/roompic2.jpg" alt="배너2"></a></div>
+                          <div class="swiper-slide"><a href="javascript:return false;"><img src="images/room/roompic3.jpg" alt="배너3"></a></div>
+                          <div class="swiper-slide"><a href="javascript:return false;"><img src="images/room/roompic4.jpg" alt="배너4"></a></div>
+                        </div>
+                        <!-- 화살표 버튼 -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <!-- 블릿 버튼 -->
+                        <div class="swiper-pagination"></div>
+                      </div>
+        
+                     <script>
+                     var swiper = new Swiper('.swiper-container', {
+                      autoplay: {
+                        delay: 2500,//슬라이드 넘어가는 시간
+                        disableOnInteraction: false,
+                      },
+                      loop: true,//슬라이드 무한반복
+                      navigation: {//화살표 버튼
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                        pagination: {//블릿 버튼
+                        el: '.swiper-pagination',
+                        clickable: true,
+                      },
+                    });
+                  </script>
+
+
+                </div>
+
+
+
+
+
+                <div class="room_text">
+                    <img src="images/roomheader.png" alt="">
+                    <p class="room_h">ROOM STANDARD</p>
+                    <p class="room_t">16세기 유럽의 아름다움을 <br>
+                        그대로 구현한 공간 <br>
+                        <br>
+                        아름답고 편안한 공간에서 <br>
+                        꿈을 꾸고 있는 듯한 <br>
+                        황홀함을 경험해보시기 바랍니다.</p>
+                        <strong>\ 790,000 ~
+                        </strong>
+                        <p class="price"><a href="javascript:return false;">자세히보기</a></p>
+                </div>
+
+                <div class="deco2">
+                    <img src="images/room_bottom_deco.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        
+
+
+
+
+            <div class="m_room_box">
+
+                <div class="faqs">
+
+                    <ul class="right">
+                        <li>
+                            <p class="notice_line">
+                            <ul class="font0 mroomtitle"> 
+                                <li class="font_10 c"><img src="images/roomheader.png" alt=""></li>
+                                <li class="font_18"><div class="noc_po">STANDARD</div></li>
+                               
+                            </ul>
+                            <div class="text_info">
+                                <div class="center_box">
+                                <img src="images/room/roompic1.jpg" alt="" class="mroom_header mroompic">
+                                    <div class="toggle_bg">
+                                        <img src="images/line_curve.png" alt="">
+                                <p class="mroom_text">
+    
+                                    16세기 유럽의 아름다움을 <br>
+                                    그대로 구현한 공간 <br>
+                                    <br>
+                                    아름답고 편안한 공간에서 <br>
+                                    꿈을 꾸고 있는 듯한 <br>
+                                    황홀함을 경험해보시기 바랍니다.</p>
+                                </p>
+                                
+                                      </div>
+                                </div>
+                            </div>
+                            <p class="notice_line"><img src="" alt=""></p>
+                        </li>
+                       
+                        <li>
+                            <ul class="font1 mroomtitle">
+                                <li class="font_10 c"><img src="images/roomheader.png" alt=""></li>
+                                <li class="font_18"><div class="noc_po">SUITE</div></li>
+                               </ul>
+                            <div class="text_info">
+                                <div class="center_box">
+                                    <img src="images/room/roompic4.jpg" alt="" class="mroom_header mroompic">
+                                    
+                                    <div class="toggle_bg">
+                                        <img src="images/line_curve.png" alt="">
+                                    <p class="mroom_text">
+                                        비즈니스에 적합한 넓은 거실과 별실 <br>
+                                        아름다운 풍경과 테라스 <br>
+                                        티타임을 즐길 수 있는 티룸까지 <br>
+                                        <br>
+                                        루시다에서 영화같은 일상의 순간을<br>
+                
+                                        생생하게 전해드리겠습니다.</p>
+                                    </p>
+                                             </div>
+                                    </div>
+                            </div>
+                            <p class="notice_line"><img src="" alt=""></p>
+                        </li>
+                        
+                        
+                    </ul>
+                </div><!--faqs End-->
+
+     
+
+
+
+
+           
+        </div>
+        <div class="section1_footer">
+            <img src="images/section_footer.png" alt="">
+        </div>
+
+           
+    <div class="m_banner">
+        <div class="m_banner_img"></div>
+        <div class="book_m_bt">
+            <a href="javascript:return false;" >BOOK NOW</a>
+        </div>
+    </div>
+
+    </div>
+
+
+    
+
+    <div id="section2">
+        <div class="section1_header"> </div>
+        <div class="section1_title">
+            <img src="images/section_header_Line.png" alt="">
+            <strong>OFFER</strong>
+        </div>
+
+        <ul class="event_wrap">
+            <li class="spa">
+                
+                        <a href="javascript:return false;"><img src="images/event_page/le-bristol-paris-spa.jpg" alt="">
+                        <div class="event_text">
+                            <p class="event_h">루시다 스파 테라피</p>
+                             <p class="event_t">당신의 지친 일상에 휴식을 <br>
+                             루시다의 스파 테라피로 피로를 풀어드립니다.</p>
+                        </div>
+                    </a>
+            </li>
+
+            <li class="zoo">
+                <a href="javascript:return false;">
+                <img src="images/event_page/le-bristol-paris-la-verriere.jpg" alt="">
+                <div class="event_text">
+                    <p class="event_h">세계 동물 박람회</p>
+                    <p class="event_t">쉽게 만날 수 없는 동물들과 함께 <br>
+                        휴일 담당 전문가와 함께 동물들에 대해<br>
+                        알아가는 특별한 시간을 제공하겠습니다.</p>
+                </div>
+            </a>
+            </li>
+
+
+            <li class="dessert">
+                <a href="javascript:return false;">
+                <img src="images/event_page/le-bristol-paris-colonnade (1).jpg" alt="">
+                <div class="event_text">
+                    <p class="event_h">세계 디저트 다과회</p>
+                    <p class="event_t">루시다 최고 셰프와 현지 유명 셰프들의<br>
+                        각국 디저트를 맛 볼 수 있는 기회<br>
+                        오래도록 기억에 남을 다과회를 준비했습니다.</p>
+                </div>
+            </a>
+            </li>
+
+        </ul>
+        
+
+        <div id="m_offer_box">
+            <ul>
+                <li> <a href="javascript:return false;"><img src="images/event_page/m_offer (1).png" alt="사진 1"></a> </li>
+                <li> <a href="javascript:return false;"><img src="images/event_page/m_offer (2).png" alt="사진 2"></a> </li>
+                <li> <a href="javascript:return false;"><img src="images/event_page/m_offer (3).png" alt="사진 3"></a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section1_footer">
+        <img src="images/section_footer.png" alt="">
+    </div>
+
+
+
+
+
+    
+
+
+    <div id="membership_section"></div>
+    <div class="membership_card">
+        <div class="m_deco"><img src="images/room_bottom_deco.png" alt=""></div>
+        <div class="m_card"> <img src="images/mcard.png" alt=""></div>
+    </div>
+
+
+    
+
+    <div class="membership_wrap">
+        <div class="membership_banner">
+        <p class="lusida_m">LUSIDA MBERSHIP CARD</p>
+        <p class="fl_t">다양한 경험과 특별한 혜택을 제공하는 <span>LUSIDA MEMBERSHIP</span></p>
+        <p class="sl_t">멤버십 혜택을 통해 객실 및 레스토랑 등을 합리적으로 이용하실 수 있습니다.</p>
+        <div><img src="images/mbanner_line.png" alt=""></div>
+        <p class="bn_t">무료 바우처 제공 : 루시다 무료 숙박권 1매 / 루시다 디너 다이닝 2인 무료 식사권</p>
+        <p class="bn_t">할인 혜택 : 라운지 바 4인 테이블 예약시 WEEK SPECIAL CIAMPANIE 제공 전 객실 5~10% 상시 할인</p>
+        <div><img src="images/mbanner_line.png" alt=""></div>
+        <p class="bn_p">연회비 : 600,000(세금 포함) </p>
+        </div>
+    </div>
+
+
+                <div class="m_membership_section">
+    <div class="mobile_card_pic"><img src="images/mcard.png" alt=""></div>
+    <div class="moblie_membership">
+        
+        <div class="mobile_membership_text">
+        <p class="lusida_m">LUSIDA MBERSHIP CARD</p>
+        <p class="fl_t">다양한 경험과 특별한 혜택을 제공하는 </p>
+            <p class="fl_t_span">LUSIDA MEMBERSHIP</p>
+        <p class="sl_t">멤버십 혜택을 통해 객실 및 레스토랑 등을 
+            합리적으로 이용하실 수 있습니다.</p>
+        <div class="m_text_box_line"><img src="images/mbanner_line.png" alt=""></div>
+        <p class="bn_t"><span> 무료 바우처 제공 : </span>
+           <br> 루시다 무료 숙박권 1매
+            <br> 루시다 디너 다이닝 2인 무료 식사권</p>
+        <p class="bn_t"><span> 할인 혜택 : </span>
+            <br> 라운지 바 4인 테이블 예약시 
+           <br> WEEK SPECIAL CIAMPANIE 제공 
+           <br> 전 객실 5~10% 상시 할인</p>
+        <div class="m_text_box_line"><img src="images/mbanner_line.png" alt=""></div>
+        <p class="bn_p">연회비 : 600,000(세금 포함) </p>
+         </div>
+
+    </div>
+
+            </div>
+
+   
+
+            
+            <div class="pc_event_section">
+    <div class="event_section_h">
+        <div class="deco_r"><img src="images/room_bottom_deco.png" alt=""></div>
+        <div><img src="images/section_header_Line.png" alt=""></div>
+        <strong>EVENT</strong>
+    </div>
+    <div class="section1_header"> </div>
+    <div class="event_banner_wrap">
+            <div class="event_banner_box">
+        <div class="piano"><a href="javascript:return false;"><img src="images/piano_banner.png" alt=""></a></div>
+        <div class="summer"><a href="javascript:return false;"><img src="images/summer_banner.png" alt=""></a></div>
+        </div>
+    </div>
+    <div class="section1_footer">
+        <img src="images/section_footer.png" alt="">
+    </div>
+    <div class="section1_header"> </div>
+
+        </div>
+
+
+
+        <div class="moblie_event_section">
+            <div class="section1_header"> </div>
+            <div class="section1_title">
+                <img src="images/section_header_Line.png" alt="">
+                <strong>EVENT</strong>
+            </div>
+            <div class="m_event_banner_section">
+                <div class="m_piano"><a href="javascript:return false;"><img src="images/piano_banner.png" alt=""></a></div>
+                <div class="m_summer"><a href="javascript:return false;"><img src="images/summer_banner.png" alt=""></a></div>
+                
+            </div>
+        </div>
+        <div class="section1_footer moblie_event_section">
+            <img src="images/section_footer.png" alt="">
+        </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+        
+        <div class="pc_lusida_about_section">
+
+    <div id="lusida_about">
+        <img src="images/section_header_Line.png" alt="">
+        <strong>LUSIDA ABOUT</strong>
+        <div class="section1_footer">
+            <img src="images/section_footer.png" alt="">
+        </div>
+    </div>
+
+    <div class="section1_header"> </div>
+    
+    <div class="lusida_about_section1"> </div>
+    <div class="lusida_name_box">
+        <img src="images/lusida_name_box.png" alt="">
+    </div>
+
+    <div class="lusida_about_section2">
+        <img src="images/about_sitabox.png" alt="">
+    </div>
+
+    <div class="invated">
+        <div class="invated_card"><img src="images/invated.png" alt=""></div>
+    </div>
+
+</div>
+
+
+
+<div class="m_lusida_about_section">
+                <div class="section1_header"> </div>
+                    <div class="section1_title">
+                    <img src="images/section_header_Line.png" alt="">
+                    <strong>LUSIDA ABOUT</strong>
+                    </div>
+            <div class="section1_footer">
+                <img src="images/section_footer.png" alt="">
+            </div>
+
+            <div class="about_bg_box">
+                <div class="m_about_name_box">
+                <img src="images/mabout_name.png" alt="">
+            </div>
+            </div>
+            <div class="about_section2">
+                <img src="images/about_section2.png" alt="">
+            </div>
+            
+
+            <div class="inv_bg">
+                <div class="inv">
+                    <img src="images/m_inv.png" alt="">
+                </div>
+            </div>
+    </div>
+
+
+
+
+    <div class="footer_head top">
+       <a href="#header_wrap">TOP</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="footer">
+            <div class="footer_box">
+                <div class="footer_logo">
+                    <img src="images/footerlogo.png" alt="">
+                </div>
+
+
+
+
+                <div class="footer_text">
+                    <div class="footer_icon">
+                        <a href="javascript:return false;">회사소개</a>
+                        <a href="javascript:return false;">사이트맵</a>
+                        <a href="javascript:return false;">개인정보처리방침</a>
+                        <a href="javascript:return false;">이메일무단수집금지</a>
+                        <a href="javascript:return false;">영상정보처리기기</a>
+                        <a href="javascript:return false;">운영방침</a>
+                    </div>
+    
+                    <div class="footer_info">
+                        <p>(주)루시다 호텔 부산광역시 중구 11-02로 (우:47064) 대표이사 이유리</p>
+                        <p>사업자등록번호 104-05-16117 통신판매신고번호 중구 00111호 사업자정보확인></p>
+                        <p>호스팅서비스제공자 구글 객실예약 lusida.reserve@lusida.com</p>
+                        <p>copylight @ HOTEL LUSIDA CO., CID ALL Rights Reserved.</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="footer_link">
+
+
+                    <div class="language">
+                        <a href="javascript:return false;">EN</a>
+                        <p>l</p>
+                        <a href="javascript:return false;">JP</a>
+                        <p>l</p>
+                        <a href="javascript:return false;">CN</a>
+                    </div>
+
+
+                    <div class="sns_icon">
+                        <a href="javascript:return false;"><img src="images/insta.png" alt=""></a>
+                        <a href="javascript:return false;"><img src="images/facebook.png" alt=""></a>
+                        <a href="javascript:return false;"><img src="images/twitter.png" alt=""></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+    <div class="m_footer">
+
+        <div class="language">
+            <a href="javascript:return false;">EN</a>
+            <p>l</p>
+            <a href="javascript:return false;">JP</a>
+            <p>l</p>
+            <a href="javascript:return false;">CN</a>
+        </div>
+
+
+        <div class="sns_icon">
+            <a href="javascript:return false;"><img src="images/insta.png" alt=""></a>
+            <a href="javascript:return false;"><img src="images/facebook.png" alt=""></a>
+            <a href="javascript:return false;"><img src="images/twitter.png" alt=""></a>
+        </div>
+
+
+        <div class="footer_text">
+            <div class="footer_icon">
+                <a href="javascript:return false;">회사소개</a>
+                <a href="javascript:return false;">사이트맵</a>
+                <a href="javascript:return false;">개인정보처리방침</a>
+                <br>
+                <a href="javascript:return false;">이메일무단수집금지</a>
+                <a href="javascript:return false;">영상정보처리기기</a>
+                <a href="javascript:return false;">운영방침</a>
+            </div>
+
+            <div class="footer_info">
+                <p>(주)루시다 호텔 부산광역시 중구 11-02로 (우:47064) 
+                   <br> 대표이사 이유리</p>
+                   <br>
+                <p>사업자등록번호 104-05-16117 
+                    <br>
+                   <br> 통신판매신고번호 
+                   <br> 중구 00111호 
+                   <br>
+                  <br></p>
+                <p>호스팅서비스제공자 구글 객실예약 
+                   <br> lusida.reserve@lusida.com</p>
+                   <br>
+                <p>copylight @ HOTEL LUSIDA CO., 
+                   <br> CID ALL Rights Reserved.</p>
+            </div>
+        </div>
+
+
+        <div class="m_footer_logo">
+            <img src="images/footerlogo.png" alt="">
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
